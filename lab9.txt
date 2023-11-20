@@ -1,0 +1,9 @@
+Question 1: The default authentication scheme for DRF is Session authentication. When user login, the server verify the login information and generate a session including information about the client with a unique ID. Then the server send the ID back to the client as a cookie. Subsequent requests can be sent with that ID to bypass the authentication. This is a stateful authentication
+
+Question 2: The authentication scheme used in httpie for -a or --auth is basic authentication. Every request is sent with the encoded username and password. The server will decode and verify the credentials. This is a stateless authentication
+
+Question 3: 
+Session Authentication: stateful, server store the information of the session data. 
+Token Authentication: stateless, server encode the whole login data into a token with a private key. Subsequent requests from user only need to send the token and server can decode it back to login data and verify it
+
+Question 4: When click logging with Google, bitbucket will prepare send request to Google's authorization service with bitbucket server ID, user login data (username and password). Then it will ask for your consent so that bitbucket can further use returned token from Google to make subsequent requests. After passing the consent, bitbucket will send the authentication request to Google. Google will verify and return an access token to Bitbucket. Starting from that point, Bitbucket can use that access token to make subsequent requests to Google on behave of yourself.
